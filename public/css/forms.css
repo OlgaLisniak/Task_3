@@ -1,0 +1,31 @@
+.welcome, .info, .regist {
+    text-align: center;
+}
+
+body {
+    background: linear-gradient(#E8E8E8, transparent 1px), linear-gradient( 90deg, #E8E8E8, transparent 1px);
+	background-size: 25px 25px;
+	background-position: center center;
+	resize: none;
+}
+
+form {
+	width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    display: inline-block;
+    /*text-align: right;*/
+    width: 150px;
+}
+
+.container {
+    margin-top:20;
+}
+

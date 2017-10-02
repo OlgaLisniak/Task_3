@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration</title>
+    <link  href='/css/forms.css' rel='stylesheet' />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+
+    
+<div class="container">
+    <h1>Registration</h1>
+    <section class="regist">
+        <h3>Fill in all fields to register</h3>
+    </section>
+    
+    <br>
+
+    <form class="form-horizontal", action="/registration/add" method="post">
+        <% if (Object.keys(errors).length) { %>
+            <div class="alert alert-warning">Please check form data!</div>
+        <% } %>
+        <div class="form-group">
+            <label for="name_field">Name: </label>
+            <input type="text" name="name" id="name_field"></input>
+         
+        </div>
+        <div class="form-group">
+            <label for="email_field">Email: </label>
+            <input type="email" name="email" id="email_field"></input>
+            
+        </div>
+        <div class="form-group">
+            <label for="pass_field">Password: </label>
+            <input type="password" name="pass" id="pass_field"></input>
+           
+        </div>
+        <div class="form-group">
+            <label for="pass2_field">Confirm password: </label>
+            <input type="password" name="pass2" id="pass2_field"></input>
+            
+        </div>
+        <div>
+            <input type="submit" value="Register" class="btn btn-primary"></input>
+        </div>
+
+        <% if (errors) { %>
+
+        <% for (error in errors) { %>
+        <div class="alert alert-warning"> <%= errors[error].msg %></div>
+
+        <% } %>
+        <% } %>
+    </form>
+</div>
+</body>
+</html>
